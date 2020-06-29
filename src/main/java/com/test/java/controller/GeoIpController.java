@@ -20,7 +20,7 @@ public class GeoIpController {
 
     @GetMapping("/all")
     @ResponseStatus(HttpStatus.OK)
-    public ResponseEntity<GeoIp> getAddresses() throws IOException, GeoIp2Exception {
+    public ResponseEntity<GeoIp> getAddresses()  {
         return new ResponseEntity<>(locationService.getLocation("93.125.107.39"), HttpStatus.OK);
     }
 }

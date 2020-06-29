@@ -13,18 +13,27 @@ import java.net.InetAddress;
 @Service
 public class GeoIpLocationService {
 
-    public DatabaseReader RawDBGeoIPLocationService() throws IOException {
-        File database = new File("src/main/resources/GeoLite2-Country.mmdb");
-        return new DatabaseReader.Builder(database).build();
+    public DatabaseReader RawDBGeoIPLocationService() {
+        try {
+            File database = new File("src/main/resources/GeoLite2-Country.mmdb");
+            return new DatabaseReader.Builder(database).build();
+        } catch (IOException e) {
+            System.out.println("Geo database not found");
+        }
+        return null;
     }
 
-    public GeoIp getLocation(String ip)
-            throws IOException, GeoIp2Exception {
-        InetAddress ipAddress = InetAddress.getByName(ip);
-        CountryResponse response = RawDBGeoIPLocationService().country(ipAddress);
+    public GeoIp getLocation(String ip) {
+        try {
+            InetAddress ipAddress = InetAddress.getByName(ip);
+            CountryResponse response = RawDBGeoIPLocationService().country(ipAddress);
 
-        String countryName = response.getCountry().getName();
-        return new GeoIp(ip, countryName);
+            String countryName = response.getCountry().getName();
+            return new GeoIp(ip, countryName);
+        } catch (GeoIp2Exception | IOException e) {
+            System.out.println("Problems with Geo method");
+        }
+        return null;
     }
 }
 

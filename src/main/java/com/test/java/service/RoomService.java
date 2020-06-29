@@ -11,9 +11,7 @@ public interface RoomService {
 
     Room update (Room room);
 
-    void delete (Long id);
-
-    Room findById(Long id);
-
     Room findByName (String name);
+
+    Room getRoomByIp (String name, String ip);
 }
