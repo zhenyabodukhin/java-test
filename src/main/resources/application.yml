@@ -1,0 +1,34 @@
+spring:
+  datasource:
+    username: postgres
+    password: root
+  flyway:
+    enabled: true
+    ignore-missing-migrations: true
+    locations: classpath:/db/migrations
+    baseline-on-migrate: true
+    baseline-description: Flyway Scripts
+    url: "jdbc:postgresql://localhost:5432/project_pizza"
+    user: postgres
+    password: root
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: zhenyabodukhin@gmail.com
+    password: cerdlnpuiikyvpeo
+    protocol: smtp
+    tls: true
+    properties.mail.smtp:
+      auth: true
+      starttls.enable: true
+      ssl.trust: smtp.gmail.com
+datasource:
+  driverName: org.postgresql.Driver
+  url: "jdbc:postgresql://localhost:5432/project_pizza"
+  login: postgres
+  password: root
+  initialSize: 10
+  maxActive: 7
+jwttoken:
+  secret: secretBod
+  expire: 2140000000
