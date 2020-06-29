@@ -19,17 +19,17 @@ import java.util.Objects;
 @ConfigurationProperties("datasource")
 public class DatabaseConfig {
 
-    private String driverName;
+    private String driverName = "org.postgresql.Driver";
 
-    private String url;
+    private String url = "jdbc:postgresql://localhost:5432/room_db";
 
-    private String login;
+    private String login = "postgres";
 
-    private String password;
+    private String password = "root";
 
-    private String initialSize;
+    private String initialSize = "10";
 
-    private String maxActive;
+    private String maxActive = "7";
 
     @Bean(value = "dataSource", destroyMethod = "close")
     @Scope("singleton")

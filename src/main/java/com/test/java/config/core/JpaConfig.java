@@ -43,7 +43,7 @@ public class JpaConfig {
 
         LocalContainerEntityManagerFactoryBean factory = new LocalContainerEntityManagerFactoryBean();
         factory.setJpaVendorAdapter(vendorAdapter);
-        factory.setPackagesToScan("com.htp");
+        factory.setPackagesToScan("com.test.java");
         factory.setDataSource(dataSource);
         factory.setJpaProperties(getAdditionalProperties());
         factory.afterPropertiesSet();
@@ -65,7 +65,7 @@ public class JpaConfig {
 
         LocalSessionFactoryBean factoryBean = new LocalSessionFactoryBean();
 
-        factoryBean.setPackagesToScan("com.htp");
+        factoryBean.setPackagesToScan("com.test.java");
         factoryBean.setDataSource(dataSource);
         factoryBean.setHibernateProperties(getAdditionalProperties());
         factoryBean.afterPropertiesSet();

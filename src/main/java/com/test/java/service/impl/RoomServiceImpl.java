@@ -1,6 +1,6 @@
 package com.test.java.service.impl;
 
-import com.test.java.Exception.EntityNotFoundException;
+import com.test.java.exception.EntityNotFoundException;
 import com.test.java.domain.Room;
 import com.test.java.repository.RoomRepository;
 import com.test.java.service.RoomService;
