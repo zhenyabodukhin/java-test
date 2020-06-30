@@ -14,7 +14,7 @@ import java.util.List;
 
 @RestController
 @CrossOrigin
-@RequestMapping(value = "/rest/room")
+@RequestMapping(value = "/room")
 @RequiredArgsConstructor
 public class RoomController {
 
@@ -37,12 +37,18 @@ public class RoomController {
         return new ResponseEntity<>(roomService.save(room), HttpStatus.OK);
     }
 
-    @GetMapping("/get/update")
+    @GetMapping("/get")
     @ResponseStatus(HttpStatus.OK)
     public ResponseEntity<Room> getIntoRoom(@RequestBody @Valid RoomUpdateRequest request) {
-        Room room = roomService.getRoomByIp(request.getCountryName(), request.getIp());
+        return new ResponseEntity<>(roomService.getRoomByIp(request.getCountryName(), request.getIp()), HttpStatus.OK);
+    }
 
-        room.setLightStatus(request.getLightStatus());
+    @GetMapping("/get/update")
+    @ResponseStatus(HttpStatus.OK)
+    public ResponseEntity<Room> setLight(String roomName, String lightStatus) {
+        Room room = roomService.findByName(roomName);
+
+        room.setLightStatus(lightStatus);
 
         return new ResponseEntity<>(room, HttpStatus.OK);
     }
