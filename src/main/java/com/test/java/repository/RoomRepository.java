@@ -9,7 +9,4 @@ public interface RoomRepository extends JpaRepository<Room, Long> {
 
     @Query("select u from Room u where u.name = :name")
     Room findByName (@Param("name") String name);
-
-    @Query("select u from Room u where u.name = :name")
-    Room getRoomByIp (@Param("name") String name, String ip);
 }

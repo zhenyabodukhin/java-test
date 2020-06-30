@@ -56,7 +56,7 @@ public class RoomServiceImpl implements RoomService {
         GeoIp geoCountry = locationService.getLocation(ip);
         String userCountry = geoCountry.getCountry();
         if (roomCountry.equals(userCountry)) {
-            return roomRepository.findByName(name);
+            return selectedRoom;
         } else {
             throw new NoAccessException(Room.class, name);
         }
