@@ -1,8 +1,10 @@
 package com.test.java.controller;
 
+import com.test.java.domain.GeoIp;
 import com.test.java.domain.Room;
 import com.test.java.request.RoomCreateRequest;
 import com.test.java.request.RoomUpdateRequest;
+import com.test.java.service.impl.GeoIpLocationService;
 import com.test.java.service.impl.RoomServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -20,6 +22,8 @@ public class RoomController {
 
     private final RoomServiceImpl roomService;
 
+    private final GeoIpLocationService locationService;
+
     @GetMapping("/all")
     @ResponseBody
     @ResponseStatus(HttpStatus.OK)
@@ -31,10 +35,13 @@ public class RoomController {
     @ResponseBody
     @ResponseStatus(HttpStatus.CREATED)
     public ResponseEntity<Room> createRoom(@RequestBody @Valid RoomCreateRequest request) {
+        GeoIp geoCountry = locationService.getLocation(request.getIp());
+        String userCountry = geoCountry.getCountry();
+
         Room room = new Room();
 
         room.setName(request.getRoomName());
-        room.setCountryName(request.getCountryName());
+        room.setCountryName(userCountry);
 
         return new ResponseEntity<>(roomService.save(room), HttpStatus.OK);
     }
