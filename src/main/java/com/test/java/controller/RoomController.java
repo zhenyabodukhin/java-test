@@ -21,12 +21,14 @@ public class RoomController {
     private final RoomServiceImpl roomService;
 
     @GetMapping("/all")
+    @ResponseBody
     @ResponseStatus(HttpStatus.OK)
     public ResponseEntity<List<Room>> getAllRooms() {
         return new ResponseEntity<>(roomService.findAll(), HttpStatus.OK);
     }
 
     @PostMapping("/create")
+    @ResponseBody
     @ResponseStatus(HttpStatus.CREATED)
     public ResponseEntity<Room> createRoom(@RequestBody @Valid RoomCreateRequest request) {
         Room room = new Room();
@@ -38,12 +40,14 @@ public class RoomController {
     }
 
     @GetMapping("/get")
+    @ResponseBody
     @ResponseStatus(HttpStatus.OK)
     public ResponseEntity<Room> getIntoRoom(@RequestBody @Valid RoomUpdateRequest request) {
         return new ResponseEntity<>(roomService.getRoomByIp(request.getCountryName(), request.getIp()), HttpStatus.OK);
     }
 
     @GetMapping("/get/update")
+    @ResponseBody
     @ResponseStatus(HttpStatus.OK)
     public ResponseEntity<Room> setLight(String roomName, String lightStatus) {
         Room room = roomService.findByName(roomName);
