@@ -141,7 +141,7 @@
         </dependency>
     </dependencies>
 
-    <!--<build>
+    <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -162,9 +162,9 @@
                 <version>2.22.2</version>
             </plugin>
         </plugins>
-    </build>-->
+    </build>
 
-    <build>
+    <!--<build>
     <finalName>app</finalName>
     <plugins>
         <plugin>
@@ -201,5 +201,5 @@
             </executions>
         </plugin>
     </plugins>
-</build>
+</build>-->
 </project>
