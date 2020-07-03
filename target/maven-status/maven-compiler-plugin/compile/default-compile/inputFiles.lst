@@ -1,0 +1,16 @@
+C:\Users\zheny\IdeaProjects\java\src\main\java\com\test\java\request\RoomUpdateRequest.java
+C:\Users\zheny\IdeaProjects\java\src\main\java\com\test\java\StartApplication.java
+C:\Users\zheny\IdeaProjects\java\src\main\java\com\test\java\config\core\JpaConfig.java
+C:\Users\zheny\IdeaProjects\java\src\main\java\com\test\java\controller\exception\handler\DefaultExceptionHandler.java
+C:\Users\zheny\IdeaProjects\java\src\main\java\com\test\java\controller\messages\ErrorMessage.java
+C:\Users\zheny\IdeaProjects\java\src\main\java\com\test\java\exception\NoAccessException.java
+C:\Users\zheny\IdeaProjects\java\src\main\java\com\test\java\repository\RoomRepository.java
+C:\Users\zheny\IdeaProjects\java\src\main\java\com\test\java\domain\GeoIp.java
+C:\Users\zheny\IdeaProjects\java\src\main\java\com\test\java\config\core\DatabaseConfig.java
+C:\Users\zheny\IdeaProjects\java\src\main\java\com\test\java\request\RoomCreateRequest.java
+C:\Users\zheny\IdeaProjects\java\src\main\java\com\test\java\service\impl\GeoIpLocationService.java
+C:\Users\zheny\IdeaProjects\java\src\main\java\com\test\java\service\impl\RoomServiceImpl.java
+C:\Users\zheny\IdeaProjects\java\src\main\java\com\test\java\domain\Room.java
+C:\Users\zheny\IdeaProjects\java\src\main\java\com\test\java\exception\EntityAlreadyExistException.java
+C:\Users\zheny\IdeaProjects\java\src\main\java\com\test\java\service\RoomService.java
+C:\Users\zheny\IdeaProjects\java\src\main\java\com\test\java\controller\RoomController.java

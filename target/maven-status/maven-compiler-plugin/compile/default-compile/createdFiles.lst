@@ -1,0 +1,17 @@
+com\test\java\config\core\JpaConfig.class
+com\test\java\domain\Room.class
+com\test\java\config\core\DatabaseConfig.class
+com\test\java\service\RoomService.class
+com\test\java\StartApplication.class
+com\test\java\repository\RoomRepository.class
+com\test\java\domain\GeoIp.class
+com\test\java\controller\exception\handler\DefaultExceptionHandler.class
+com\test\java\domain\Room_.class
+com\test\java\service\impl\GeoIpLocationService.class
+com\test\java\request\RoomCreateRequest.class
+com\test\java\controller\messages\ErrorMessage.class
+com\test\java\controller\RoomController.class
+com\test\java\service\impl\RoomServiceImpl.class
+com\test\java\request\RoomUpdateRequest.class
+com\test\java\exception\EntityAlreadyExistException.class
+com\test\java\exception\NoAccessException.class
