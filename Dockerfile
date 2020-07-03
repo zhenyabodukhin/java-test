@@ -1,7 +1,6 @@
 FROM openjdk:8-jre
-WORKDIR /app
-VOLUME ["/app"]
-COPY app.jar app.jar
+VOLUME ["/target"]
+COPY java-1.0.0.jar java-1.0.0.jar
 COPY start.sh start.sh
 COPY wait-for-it.sh wait-for-it.sh
 RUN sh -c 'touch app.jar'
