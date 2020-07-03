@@ -22,14 +22,4 @@ public class RoomCreateRequest {
     @Pattern(regexp = "^([01]?\\\\d\\\\d?|2[0-4]\\\\d|25[0-5])\\\\.([01]?\\\\d\\\\d?|2[0-4]\\\\d|25[0-5])\\\\.\n" +
             "([01]?\\\\d\\\\d?|2[0-4]\\\\d|25[0-5])\\\\.([01]?\\\\d\\\\d?|2[0-4]\\\\d|25[0-5])$")
     private String ip;
-
-/*    @NotNull
-    @NotEmpty
-    @Pattern(regexp = "[A-Za-z]+")
-    private String countryName;*/
-
-/*    @NotNull
-    @NotEmpty
-    @Pattern(regexp = "\\bon\\b|\\boff\\b")
-    private String lightStatus;*/
 }

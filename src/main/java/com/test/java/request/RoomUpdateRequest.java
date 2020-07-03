@@ -24,9 +24,4 @@ public class RoomUpdateRequest {
     @NotEmpty
     @Pattern(regexp = "[A-Za-z]+")
     private String countryName;
-
-/*    @NotNull
-    @NotEmpty
-    @Pattern(regexp = "\\bon\\b|\\boff\\b")
-    private String lightStatus;*/
 }
