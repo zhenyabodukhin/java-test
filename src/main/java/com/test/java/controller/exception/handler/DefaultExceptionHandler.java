@@ -3,6 +3,7 @@ package com.test.java.controller.exception.handler;
 
 import com.test.java.controller.messages.ErrorMessage;
 import com.test.java.exception.EntityAlreadyExistException;
+import com.test.java.exception.GeoIpException;
 import com.test.java.exception.NoAccessException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -26,6 +27,13 @@ public class DefaultExceptionHandler {
         log.error(e.getMessage(), e);
         return new ResponseEntity<>(new ErrorMessage(e.getMessage()),
                 HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler(GeoIpException.class)
+    public ResponseEntity<ErrorMessage> handleGeoIpException(GeoIpException e) {
+        log.error(e.getMessage(), e);
+        return new ResponseEntity<>(new ErrorMessage(e.getMessage()),
+                HttpStatus.FORBIDDEN);
     }
 
     @ExceptionHandler(NullPointerException.class)
