@@ -1,4 +1,3 @@
-com\test\java\config\core\GeoConfig.class
 com\test\java\config\core\JpaConfig.class
 com\test\java\domain\Room.class
 com\test\java\config\core\DatabaseConfig.class

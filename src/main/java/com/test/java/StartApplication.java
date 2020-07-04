@@ -1,7 +1,6 @@
 package com.test.java;
 
 import com.test.java.config.core.DatabaseConfig;
-import com.test.java.config.core.GeoConfig;
 import com.test.java.config.core.JpaConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -21,8 +20,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
         })
 @Import({
         DatabaseConfig.class,
-        JpaConfig.class,
-        GeoConfig.class
+        JpaConfig.class
 })
 public class StartApplication extends SpringBootServletInitializer {
     public static void main(String[] args) {
