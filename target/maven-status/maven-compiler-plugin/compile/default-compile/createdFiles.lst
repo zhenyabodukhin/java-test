@@ -1,7 +1,9 @@
+com\test\java\config\core\GeoConfig.class
 com\test\java\config\core\JpaConfig.class
 com\test\java\domain\Room.class
 com\test\java\config\core\DatabaseConfig.class
 com\test\java\service\RoomService.class
+com\test\java\exception\GeoIpException.class
 com\test\java\StartApplication.class
 com\test\java\repository\RoomRepository.class
 com\test\java\domain\GeoIp.class
