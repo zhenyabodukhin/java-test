@@ -15,7 +15,7 @@
     <description>Demo project for Spring Boot</description>
 
     <properties>
-        <java.version>11</java.version>
+        <java.version>8</java.version>
         <dbcp-version>1.4</dbcp-version>
         <postgres>42.2.12</postgres>
         <json>0.9.1</json>
@@ -139,36 +139,45 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>org.flywaydb</groupId>
+            <artifactId>flyway-core</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
         <plugins>
-            <plugin>
+<!--            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
                 <configuration>
                     <release>8</release>
                 </configuration>
-            </plugin>
+            </plugin>-->
 
             <plugin>
-                <!-- Build an executable JAR -->
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+
+            <!--<plugin>
+                &lt;!&ndash; Build an executable JAR &ndash;&gt;
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
-                <version>3.1.0</version>
+                <version>3.2.0</version>
                 <configuration>
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <classpathPrefix>lib/</classpathPrefix>
                             <mainClass>com.test.java.StartApplication</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
-            </plugin>
+            </plugin>-->
 
-            <plugin>
+            <!--<plugin>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.22.2</version>
             </plugin>
@@ -176,7 +185,7 @@
             <plugin>
                 <artifactId>maven-failsafe-plugin</artifactId>
                 <version>2.22.2</version>
-            </plugin>
+            </plugin>-->
         </plugins>
     </build>
 

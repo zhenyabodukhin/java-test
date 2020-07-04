@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.apache.commons.dbcp.BasicDataSource;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -19,17 +20,17 @@ import java.util.Objects;
 @ConfigurationProperties("datasource")
 public class DatabaseConfig {
 
-    private String driverName = "org.postgresql.Driver";
+    private String driverName;
 
-    private String url = "jdbc:postgresql://localhost:5432/room_db";
+    private String url;
 
-    private String login = "postgres";
+    private String login;
 
-    private String password = "root";
+    private String password;
 
-    private String initialSize = "10";
+    private String initialSize;
 
-    private String maxActive = "7";
+    private String maxActive;
 
     @Bean(value = "dataSource", destroyMethod = "close")
     @Scope("singleton")
