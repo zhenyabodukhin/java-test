@@ -3,7 +3,7 @@ package com.test.java.controller;
 import com.test.java.domain.GeoIp;
 import com.test.java.domain.Room;
 import com.test.java.request.RoomCreateRequest;
-import com.test.java.request.RoomUpdateRequest;
+import com.test.java.request.RoomGetRequest;
 import com.test.java.service.impl.GeoIpLocationService;
 import com.test.java.service.impl.RoomServiceImpl;
 import lombok.RequiredArgsConstructor;
@@ -49,8 +49,8 @@ public class RoomController {
     @GetMapping("/get")
     @ResponseBody
     @ResponseStatus(HttpStatus.OK)
-    public ResponseEntity<Room> getIntoRoom(@RequestBody @Valid RoomUpdateRequest request) {
-        return new ResponseEntity<>(roomService.getRoomByIp(request.getCountryName(), request.getIp()), HttpStatus.OK);
+    public ResponseEntity<Room> getIntoRoom(@RequestBody @Valid RoomGetRequest request) {
+        return new ResponseEntity<>(roomService.getRoomByIp(request.getRoomName(), request.getIp()), HttpStatus.OK);
     }
 
     @GetMapping("/get/update")

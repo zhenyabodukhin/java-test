@@ -12,7 +12,7 @@ import javax.validation.constraints.Pattern;
 @NoArgsConstructor
 @EqualsAndHashCode
 @ToString
-public class RoomUpdateRequest {
+public class RoomGetRequest {
 
     @NotNull
     @NotEmpty
@@ -23,5 +23,5 @@ public class RoomUpdateRequest {
     @NotNull
     @NotEmpty
     @Pattern(regexp = "[A-Za-z]+")
-    private String countryName;
+    private String roomName;
 }
