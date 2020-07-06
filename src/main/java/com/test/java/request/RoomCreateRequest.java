@@ -14,8 +14,7 @@ public class RoomCreateRequest {
 
     @NotNull
     @NotEmpty
-    @Pattern(regexp = "[A-Za-z]+")
-    private String roomName;
+    private String room;
 
     @NotNull
     @NotEmpty

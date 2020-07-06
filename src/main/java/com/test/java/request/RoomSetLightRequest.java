@@ -12,13 +12,7 @@ import javax.validation.constraints.Pattern;
 @NoArgsConstructor
 @EqualsAndHashCode
 @ToString
-public class RoomGetRequest {
-
-    @NotNull
-    @NotEmpty
-    @Pattern(regexp = "^([01]?\\\\d\\\\d?|2[0-4]\\\\d|25[0-5])\\\\.([01]?\\\\d\\\\d?|2[0-4]\\\\d|25[0-5])\\\\.\n" +
-            "([01]?\\\\d\\\\d?|2[0-4]\\\\d|25[0-5])\\\\.([01]?\\\\d\\\\d?|2[0-4]\\\\d|25[0-5])$")
-    private String ip;
+public class RoomSetLightRequest {
 
     @NotNull
     @NotEmpty
