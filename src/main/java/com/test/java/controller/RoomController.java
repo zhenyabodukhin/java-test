@@ -61,12 +61,11 @@ public class RoomController {
     public ResponseEntity<Room> setLight(@Valid RoomSetLightRequest request) {
         Room room = roomService.findByName(request.getRoomName());
 
-        if(room.getLightStatus().equals("On")) {
+        if (room.getLightStatus().equals("On")) {
             room.setLightStatus("Off");
         } else {
             room.setLightStatus("On");
         }
-
         return new ResponseEntity<>(roomService.update(room), HttpStatus.OK);
     }
 }

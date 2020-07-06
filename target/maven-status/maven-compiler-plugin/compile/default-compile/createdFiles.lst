@@ -2,6 +2,7 @@ com\test\java\config\core\JpaConfig.class
 com\test\java\domain\Room.class
 com\test\java\config\core\DatabaseConfig.class
 com\test\java\service\RoomService.class
+com\test\java\config\swagger\SwaggerConfig.class
 com\test\java\exception\GeoIpException.class
 com\test\java\StartApplication.class
 com\test\java\repository\RoomRepository.class
@@ -9,6 +10,7 @@ com\test\java\domain\GeoIp.class
 com\test\java\controller\exception\handler\DefaultExceptionHandler.class
 com\test\java\domain\Room_.class
 com\test\java\service\impl\GeoIpLocationService.class
+com\test\java\request\RoomSetLightRequest.class
 com\test\java\request\RoomCreateRequest.class
 com\test\java\request\RoomGetRequest.class
 com\test\java\controller\messages\ErrorMessage.class
